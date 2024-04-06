@@ -2,53 +2,53 @@
 <html>
 <head>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <style>
-        body, html {
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    #back {
+        background: red;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px; /* Reduced padding might allow SVG to be larger */
+        box-sizing: border-box;
+        transition: background-color 1s ease; /* Smooth transition for background color */
+    }
+    svg {
+        max-width: 90vw; /* Increase the max-width for larger SVG display */
+        max-height: 90vh; /* Add max-height to control SVG size vertically */
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 1s; /* Smooth transition for any transformations */
+    }
+    use {
+        display: none;
+    }
+    .layer12 {
+        display: block;
+    }
+    @media screen and (max-width: 600px) {
+        body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
         }
         #back {
-            background: red;
             width: 100vw;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 100px 20px 0 33px;
-            box-sizing: border-box;
-            transition: background-color 1s ease; /* Adjusted for a smoother background color transition */
+            padding: 20px; /* Even smaller padding for smaller devices */
+            margin: 0;
         }
         svg {
-            width: 95vw; /* Adjusted to scale with the viewport width */
-            height: auto; /* Adjusts height automatically to maintain the aspect ratio */
-            transform: scale(1); /* Adjusted to default scale */
-            transition: transform 1s; /* Keeps transition for any transform changes */
+            max-width: 95vw; /* Allow SVG to take up even more width on smaller screens */
         }
-        use {
-            display: none;
-        }
-        .layer12 {
-            display: block;
-        }
-        @media screen and (max-width: 600px) {
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            #back {
-                width: 100vw;
-                height: 100vh;
-                padding: 0;
-                margin: 0; /* Adjusted for mobile devices to use full screen */
-            }
-            svg {
-                width: 95vw; /* Adjusted to take more width on smaller screens */
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div id="back">
